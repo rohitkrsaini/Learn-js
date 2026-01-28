@@ -639,3 +639,75 @@ console.log(arr) // mutable can be change
 
 //  console.log(name,username,street,zipcode,lat,lng,companyName)
 
+// ! 22-jan
+
+// ! this keyword
+
+// console.log(window); // GLOBAL OBJECT
+// console.log(this); // POINTS TO WINDOW OBJECT
+
+// //! HOW TO CREATE YOUR OWN METHOD
+// //! NOTE : DONT USE ARROW FUNC TO CREATE METHOD BCOZ "this" KEYWORD REFERS TO WINDOW OBJECT
+
+// let student = {
+//   id: 1,
+//   fname: "john",
+//   lname: "doe",
+//   getFullName: function () {
+//     console.log(`${this.fname} ${this.lname}`);
+//   },
+//   getEmail() {
+//     console.log(`${this.fname}.${this.lname}@gmail.com`);
+//   },
+// };
+
+// student.getFullName();
+// student.getEmail();
+
+//! call() , apply() and bind()
+
+// function getFullName() {
+//   return `${this.firstName} ${this.lastName}`;
+// }
+
+// function getCourseDetails(sub1, sub2) {
+//   return `${this.course} includes ${sub1} ${sub2}`;
+// }
+
+// let user1 = {
+//   id: 1,
+//   firstName: "Jane",
+//   lastName: "Doe",
+//   course: "Mern Stack",
+// };
+
+// let user2 = {
+//   id: 2,
+//   firstName: "James",
+//   lastName: "Carry",
+//   course: "Java Full Stack",
+// };
+
+// console.log(user1);
+// console.log(user2);
+
+// //! call() : immediately calls the function
+// let fullName1 = getFullName.call(user1);
+// console.log(fullName1);
+
+// let courseDetails1 = getCourseDetails.call(user1, "JS", "NodeJS");
+// console.log(courseDetails1);
+
+// //! apply() : immediately calls the function
+// let fullName2 = getFullName.apply(user2);
+// console.log(fullName2);
+
+// let courseDetails2 = getCourseDetails.apply(user2, ["Java", "SpringBoot"]);
+// console.log(courseDetails2);
+
+// //! bind() : returns bounded function which can be called later on
+// let boundedGetFullName = getFullName.bind(user1);
+// console.log(boundedGetFullName());
+
+// let boundedCouseDetails = getCourseDetails.bind(user1);
+// console.log(boundedCouseDetails("HTML", "NODE JS"));
