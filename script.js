@@ -555,3 +555,87 @@ console.log(arr) // mutable can be change
 // console.log(obj2.hobbies[0]); // coding
 // console.log(obj2.address.state); // UP
  
+//! 21-jan
+
+ //! OBJECT DESTRUCTIONG
+
+//  let obj1 = {
+//     id : 1,
+//     fname : "jone",
+//     lname : "kumar"
+//  }
+
+//  let{fname : firstName = "NA", lname = 0,sallay = 0} = obj1;
+//  console.log(firstName, lname);
+ 
+//  let obj2 ={
+//     id : 2,
+//     name : {
+//         fname : "rohit",
+//         lname : "saini"
+//     },
+
+//     hobbies : ["coding","musics","danching"],
+
+//     address :{
+//         city : "noida",
+//         state : "up",
+//         pin : 247662
+//     },
+
+//     deatils : {
+//         id : "jensQSP1",
+//         course : "java"
+//     }
+//  }
+
+ // id,fname,coding,city,deatill^id,deatill^course
+
+// let{id,
+//     name :{fname},
+//     hobbies : [h1, ,h2] ,
+//     address : {city,state},
+//     deatils : {id : DeatilsId, course}
+//  } = obj2
+
+//  console.log(id,firstName,h1,h2,city,state,DeatilsId,course)
+
+// //! ARRAY DESTRUCTURING
+// let arr = [10, 20, 30, 40, 50];
+// let [, n1, , n2] = arr;
+// console.log(n1, n2);
+
+//  const user = {
+//   id: 1,
+//   name: "Leanne Graham",
+//   username: "Bret",
+//   email: "Sincere@april.biz",
+//   address: {
+//     street: "Kulas Light",
+//     suite: "Apt. 556",
+//     city: "Gwenborough",
+//     zipcode: "92998-3874",
+//     geo: {
+//       lat: "-37.3159",
+//       lng: "81.1496"
+//     }
+//   },
+//   phone: "1-770-736-8031 x56442",
+//   website: "hildegard.org",
+//   company: {
+//     name: "Romaguera-Crona",
+//     catchPhrase: "Multi-layered client-server neural-net",
+//     bs: "harness real-time e-markets"
+//   }
+// }
+
+ // name,username,street,zipcode,lat,lng,company
+
+//  let{name, username,
+//     address : {street,zipcode, geo : {lat,lng}},
+//     company : {name : companyName}
+
+//  } =  user
+
+//  console.log(name,username,street,zipcode,lat,lng,companyName)
+
