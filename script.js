@@ -371,3 +371,70 @@ console.log(arr) // mutable can be change
 // console.log(val);
 // val();
 
+//! 19-jan
+
+//! 7) HIGHER ORDER FUNCTION AND CALLBACK FUNCTION
+// - A function which passes as an arguement to another function is known as Callback Function
+
+// - A function which passes any of these requirements
+// 1) if a function accepts another function as an arguement is known as HOF
+// function demo(fn) {
+//   fn();
+// }
+// demo(function () {
+//   console.log("Hii");
+// });
+
+// // 2) if a function returns another function is known as HOF
+// function Parent() {
+//   return function Child() {
+//     console.log("Hello");
+//   };
+// }
+// let val = Parent();
+// val();
+
+// function Demo1() {
+//   console.log("Demo 1");
+//   return function Demo2() {
+//     console.log("Demo 2");
+//     return function Demo3() {
+//       console.log("Demo 3");
+//     };
+//   };
+// }
+// Demo1()()(); // <--- JS CURRYING
+
+//! 8) ARROW FUNCTION
+// let a1 = () => {
+//   console.log("I am Arrow function 1");
+// };
+// a1();
+
+// // if no parameter, we can replace () with _
+// let a2 = (_) => {
+//   console.log("I am Arrow function 2");
+// };
+// a2();
+
+// // if having only one parameter, () is not mandatory
+// let a3 = (n1) => {
+//   console.log("I am Arrow function 3", n1);
+// };
+// a3(100);
+
+// // if having only one line of code {} is not mandatory
+// let a4 = () => console.log("I am Arrow function 4");
+// a4();
+
+// // explicit return, {} and "return" keyword is mandatory
+// let a5 = (n1, n2) => {
+//   return n1 + n2;
+// };
+// console.log(a5(10, 20));
+
+ //// implicit return , {} and "return" keyword is not required
+// let a6 = (n1, n2) => n1 + n2;
+// console.log(a6(5, 10));
+
+
