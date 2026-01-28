@@ -711,3 +711,78 @@ console.log(arr) // mutable can be change
 
 // let boundedCouseDetails = getCourseDetails.bind(user1);
 // console.log(boundedCouseDetails("HTML", "NODE JS"));
+
+//! 23-jan
+
+//! - BLOCK SCOPE :
+//  - WHENEVER WE DECLARE "let" AND "const" VARIABLES INSIDE CONDITIONAL OR LOOPING STATEMENT THOSE VARIABLES WILL ACT AS LOCAL VARIABLES AND HAVING BLOCK SCOPE
+//! - NOTE: "var" VARIABLES WILL ACT AS GLOBAL VARIABLE AND HAVING GLOBAL SCOPE WITHIN CONDITIONAL OR LOOPING STATEMENT
+
+//! - LOCAL SCOPE :
+//  - WHENEVER WE DECLARE "var", "let" OR "const" VARIABLES INSIDE A FUNCTION , IT WILL ACT AS LOCAL VARIABLES HAVING LOCAL SCOPE
+
+//! - FUNCTION SCOPE :
+//  - "var" VARIABLES ARE KNOWN AS FUNCTION SCOPE VARIABLES BECOZ IT ACTS LIKE LOCAL VARIABLE INSIDE A FUNCTION
+
+//! JAVASCRIPT OBJECT NOTATION (JSON)
+let user1 = {
+  id: 1,
+  fname: "John",
+  lname: "Doe",
+};
+
+function storeDataInLocalStorage() {
+  let jsonData = JSON.stringify(user1); // JS TO JSON
+  localStorage.setItem("usersData", jsonData);
+}
+
+function getDataFromLocalStorage() {
+  let data = localStorage.getItem("usersData");
+  let userObject = JSON.parse(data); // JSON TO JS
+  console.log(userObject);
+  document.writeln(`<em>${userObject.fname}</em>`);
+}
+
+function removeSingleDataFromLocalStorage() {
+  localStorage.removeItem("demo1");
+}
+
+function clearDataFromLocalStorage() {
+  localStorage.clear();
+}
+
+//! ARRAYS : hetrogenous in nature
+
+ // 1) Array Literals
+// let arr1 = [10, true, "Hello World", () => {}, null, 1n, undefined];
+// console.log(arr1);
+
+// 2) Array Constructor
+// let arr2 = new Array(10, false, "Bye", function () {});
+// console.log(arr2);
+
+//! ARRAY METHODS
+let arr1 = [10, 20, 30, 40];
+console.log(arr1); // [10,20,30,40]
+
+//! array.push() : Appends new elements to the end of an array, and returns the new length of the array.
+
+let newLength = arr1.push(50, 60, 70);
+console.log(arr1); // [10,20,30,40,50, 60, 70]
+console.log(newLength); // 7 <-- new length of arr1
+
+//! array.pop() : Removes the last element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
+
+let retrunVal = arr1.pop();
+console.log(arr1); // [10,20,30,40,50, 60]
+console.log(retrunVal); // 70
+
+//! array.unshift()
+let newLength2 = arr1.unshift("Hello", 100);
+console.log(arr1); // ["Hello",100,10,20,30,40,50, 60]
+console.log(newLength2); // 8
+
+//! array.shift()
+let retrunVal2 = arr1.shift();
+console.log(arr1); // [100,10,20,30,40,50, 60]
+console.log(retrunVal2); // "Hello"
