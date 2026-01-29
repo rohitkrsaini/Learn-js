@@ -786,3 +786,64 @@ console.log(newLength2); // 8
 let retrunVal2 = arr1.shift();
 console.log(arr1); // [100,10,20,30,40,50, 60]
 console.log(retrunVal2); // "Hello"
+
+//! 28-jan
+
+//! splice( startIndex , deleteCount , newElements)
+// let arr2 = [100, 200, 300, 400];
+// console.log(arr2); // [100, 200, 300, 400]
+
+// //! ADD NEW ELEMENT
+// arr2.splice(3, 0, 350);
+// console.log(arr2); // [100, 200, 300, 350, 400]
+
+// arr2.splice(2, 0, 250);
+// console.log(arr2); //  [100, 200, 250, 300, 350, 400]
+
+// //! DELETE ELEMENT
+// arr2.splice(2, 3);
+// console.log(arr2); // [100, 200, 400]
+
+// let arr3 = [1000, 2000, 3000, 4000];
+// arr3.splice(0, 3);
+// console.log(arr3); // [4000]
+
+// //! DELETE AND ADD
+// let arr4 = [100, 200, 300, 400, 500, 600];
+// arr4.splice(2, 2, 1000, 2000);
+// console.log(arr4); // [100, 200, 1000, 2000, 500, 600]
+
+// //! slice( startIndex, endIndex )
+// //          -6  -5  -4  -3  -2  -1
+// let arr5 = [10, 20, 30, 40, 50, 60];
+// //           0   1   2   3   4   5
+// console.log(arr5);
+
+// let newArr1 = arr5.slice(1, 4);
+// console.log(newArr1);
+
+// let newArr2 = arr5.slice(2);
+// console.log(newArr2);
+
+// let newArr3 = arr5.slice(-2, 3);
+// console.log(newArr3);
+
+// ! sort()
+// let arr6 = [9, 5, 2, 1, 0, 4, 7];
+// arr6.sort(); // ASC
+// console.log(arr6);
+
+// // LEXOGRAPHICAL SORTING
+// let arr7 = [90, 5, 67, 45, 1, 78, 26];
+// arr7.sort();
+// console.log(arr7); //  [1, 26, 45, 5, 67, 78, 90]
+
+// let arr8 = [80, 615, 49, 31, 10, 38];
+// arr8.sort((a, b) => a - b);
+// console.log(arr8); // [10, 31, 38, 49, 80, 615]
+
+//! concat()
+// let arr9 = [10, 20, 30];
+// let arr10 = [40, 50, 60];
+// let concatinatedArr = arr9.concat(arr10);
+// console.log(concatinatedArr); // [10, 20, 30, 40, 50, 60]
