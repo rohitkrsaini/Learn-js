@@ -314,7 +314,7 @@ console.log(arr) // mutable can be change
 
 // printFullName(firstNameInput, lastNameInput , ageInput);
 
-//! 5) RETURN TYPE FUNCTION
+ //! 5) RETURN TYPE FUNCTION
 // function getEmail(fname, lname) {
 //   let fullName = `${fname} ${lname}`;
 //   let email = `${fname}.${lname}@gmail.com`;
@@ -725,31 +725,31 @@ console.log(arr) // mutable can be change
 //  - "var" VARIABLES ARE KNOWN AS FUNCTION SCOPE VARIABLES BECOZ IT ACTS LIKE LOCAL VARIABLE INSIDE A FUNCTION
 
 //! JAVASCRIPT OBJECT NOTATION (JSON)
-let user1 = {
-  id: 1,
-  fname: "John",
-  lname: "Doe",
-};
+// let user1 = {
+//   id: 1,
+//   fname: "John",
+//   lname: "Doe",
+// };
 
-function storeDataInLocalStorage() {
-  let jsonData = JSON.stringify(user1); // JS TO JSON
-  localStorage.setItem("usersData", jsonData);
-}
+// function storeDataInLocalStorage() {
+//   let jsonData = JSON.stringify(user1); // JS TO JSON
+//   localStorage.setItem("usersData", jsonData);
+// }
 
-function getDataFromLocalStorage() {
-  let data = localStorage.getItem("usersData");
-  let userObject = JSON.parse(data); // JSON TO JS
-  console.log(userObject);
-  document.writeln(`<em>${userObject.fname}</em>`);
-}
+// function getDataFromLocalStorage() {
+//   let data = localStorage.getItem("usersData");
+//   let userObject = JSON.parse(data); // JSON TO JS
+//   console.log(userObject);
+//   document.writeln(`<em>${userObject.fname}</em>`);
+// }
 
-function removeSingleDataFromLocalStorage() {
-  localStorage.removeItem("demo1");
-}
+// function removeSingleDataFromLocalStorage() {
+//   localStorage.removeItem("demo1");
+// }
 
-function clearDataFromLocalStorage() {
-  localStorage.clear();
-}
+// function clearDataFromLocalStorage() {
+//   localStorage.clear();
+// }
 
 //! ARRAYS : hetrogenous in nature
 
@@ -762,30 +762,30 @@ function clearDataFromLocalStorage() {
 // console.log(arr2);
 
 //! ARRAY METHODS
-let arr1 = [10, 20, 30, 40];
-console.log(arr1); // [10,20,30,40]
+// let arr1 = [10, 20, 30, 40];
+// console.log(arr1); // [10,20,30,40]
 
 //! array.push() : Appends new elements to the end of an array, and returns the new length of the array.
 
-let newLength = arr1.push(50, 60, 70);
-console.log(arr1); // [10,20,30,40,50, 60, 70]
-console.log(newLength); // 7 <-- new length of arr1
+// let newLength = arr1.push(50, 60, 70);
+// console.log(arr1); // [10,20,30,40,50, 60, 70]
+// console.log(newLength); // 7 <-- new length of arr1
 
 //! array.pop() : Removes the last element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
 
-let retrunVal = arr1.pop();
-console.log(arr1); // [10,20,30,40,50, 60]
-console.log(retrunVal); // 70
+// let retrunVal = arr1.pop();
+// console.log(arr1); // [10,20,30,40,50, 60]
+// console.log(retrunVal); // 70
 
 //! array.unshift()
-let newLength2 = arr1.unshift("Hello", 100);
-console.log(arr1); // ["Hello",100,10,20,30,40,50, 60]
-console.log(newLength2); // 8
+// let newLength2 = arr1.unshift("Hello", 100);
+// console.log(arr1); // ["Hello",100,10,20,30,40,50, 60]
+// console.log(newLength2); // 8
 
 //! array.shift()
-let retrunVal2 = arr1.shift();
-console.log(arr1); // [100,10,20,30,40,50, 60]
-console.log(retrunVal2); // "Hello"
+// let retrunVal2 = arr1.shift();
+// console.log(arr1); // [100,10,20,30,40,50, 60]
+// console.log(retrunVal2); // "Hello"
 
 //! 28-jan
 
@@ -897,24 +897,84 @@ console.log(retrunVal2); // "Hello"
 
 // console.log(sum);
 
-let arr4 = [1, 2, 3, 4, 5];
+// let arr4 = [1, 2, 3, 4, 5];
 //! toString()
-let str1 = arr4.toString();
-console.log(str1); // 1,2,3,4,5
+// let str1 = arr4.toString();
+// console.log(str1); // 1,2,3,4,5
 
 //! join()
-let str2 = arr4.join(" ");
-console.log(str2); // 1 2 3 4 5
+// let str2 = arr4.join(" ");
+// console.log(str2); // 1 2 3 4 5
 
 //! split()
-let str3 = "Hello"
-console.log(str3.split(""));
+// let str3 = "Hello"
+// console.log(str3.split(""));
 
 
-function pallidrome(word){
-  let output = word.split("").reverse().join("")
-  return output === word ? true : false
+// function pallidrome(word){
+//   let output = word.split("").reverse().join("")
+//   return output === word ? true : false
   
-}
-console.log(pallidrome("abc"));
-console.log(pallidrome("racecar"));
+// }
+// console.log(pallidrome("abc"));
+// console.log(pallidrome("racecar"));
+
+//! 30-jan
+
+// array distructure
+
+// let arr1 = [10,20,30,40,50]
+// let [n1,n2,n3,n4,n5] = arr1
+// console.log(n2,n5);
+
+
+// let arr2 = [100,200,300,400,500]
+// let[,s1, ,s2] = arr2
+// console.log(s1,s2)
+
+ // nexted array
+
+// let arr3 = [1000,2000,[3000,4000],5000]
+// let[a1, ,[,a4],a5] = arr3
+// console.log(a1,a4.a5);
+
+// let arr4 = ["hello", {id : 1,fname : "jon", lname : "doe"}]
+
+// let[str1, {fname}] = arr4
+// console.log(str1,fname)
+
+//! REST AND SPRED OPERATORS : ...variable
+
+// function demo1(p1,p2,...p3){
+//   console.log(p1,p2)
+//   console.log(p3); // rest  it pure array
+//   console.log(arguments) // array like object not pure array
+  
+// }
+// demo1(5,6,7,8,9,10,11,12)
+
+// let arr1 = [10,20,30,40]
+// let[x1, ...x2] = arr1 // array destructed use rest and spred
+// console.log(x2);
+
+// let arr2 = [10,20,30,40,50,60]
+// console.log(arr2); // rest(packed array)
+// console.log(...arr2); // spred(unpacked array)
+//  let arr3 = [...arr2]  // copy array
+//  console.log(arr3);
+ 
+
+// let obj1 = {
+//   id : 1,
+//   fname : "jone",
+//   sal : 2000
+// }
+// console.log(obj1);
+
+
+// let obj2 = {
+//   ...obj1,
+//   lname : "doe",
+//   sal : 7000
+// }
+// console.log(obj2);
