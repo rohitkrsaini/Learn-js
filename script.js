@@ -1080,3 +1080,62 @@ setTimeout(() => {
   clearInterval(intervalID);
   console.log("Interval Stopped");
 }, 8000);
+
+//! PROMISE
+
+const p1 = new Promise((resolve, reject) => {
+    if(10>2){
+        resolve("hello world")
+    }
+    else{
+        reject("bye bye")
+    }
+})
+console.log(p1)
+
+p1.then((data) => {
+    document.writeln(`<h3>$data</h3>`)
+})
+
+p1.catch((err) => {
+    document.writeln(`<h3>$data</h3>`)
+})
+
+p1.finally((err) => {
+    document.writeln(`<h3>$data</h3>`)
+})
+
+//! PROMISE WITH ASYNC AND AWAIT
+
+const API_URL ="https://dummyjson.com/todos"
+
+async function getTodos(url) {
+    try {
+        let response = await fetch(url)
+        let data = await response.json()
+        console.log(data) //{todos: Array(30), total: 254, skip: 0, limit: 30}
+    
+        displayTodos(data.todos) // array(30)
+    }
+
+    catch (err) {
+        console.log(err);
+        
+    }
+}
+getTodos(API_URL)
+
+function displayTodos(allTodos) {
+  console.log(allTodos);
+
+  allTodos.forEach((ele) => {
+    let { id, userId, todo, completed } = ele;
+
+    document.writeln(`
+      <div class = 'todo'>
+        <h4>${todo}</h4>
+        <span>${completed ? "Completed" : "Pending"}</span>
+      </div>
+      `);
+  });
+}
