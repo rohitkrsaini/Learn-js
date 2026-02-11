@@ -41,8 +41,8 @@
 // // console.log(ele4);
 
 //! 5) document.querySelectorAll()
-let ele5 = document.querySelectorAll(".head3");
-console.log(ele5);
+// let ele5 = document.querySelectorAll(".head3");
+// console.log(ele5);
 
 // WHENEVER WE USE getElementsByClassName or tagName we get HTMLCollection
 // WHENEVER WE USE querySelectorAll we get NodeList
@@ -58,8 +58,12 @@ console.log(ele5);
 // HTML COLLECTION IS CALLED LIVE COLLECTION
 // NODE LIST IS CALLED STATIC COLLECTION
 
+<<<<<<< HEAD
 //! Events
 
+=======
+// ! 6feb
+>>>>>>> 327aa50f50948807191e669c344ef3121a141081
 
 //! EXAMPLE OF STATIC AND LIVE COLLECTION
 // const collection = document.getElementsByTagName("div");
@@ -212,8 +216,11 @@ h1Tag.addEventListener("click", () => {
   h1Tag.style.backgroundColor = "red";
 });
 
+<<<<<<< HEAD
 document.body.append(h1Tag);
 
+=======
+>>>>>>> 327aa50f50948807191e669c344ef3121a141081
 // document.body.append(h1Tag);
 
 const signupForm = document.getElementById("signup-form");
