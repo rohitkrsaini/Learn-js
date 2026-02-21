@@ -1,7 +1,7 @@
 // ! addEventListener( "event" ,  callbackFunc , useCapture = 0/1 )
 
-// 0 -> BUBBLING
-// 1 -> CAPTURING
+//  0 -> BUBBLING
+//  1 -> CAPTURING
 
 const section = document.querySelector("section");
 const article = document.querySelector("article");
