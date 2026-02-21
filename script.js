@@ -385,7 +385,7 @@ console.log(arr) // mutable can be change
 //   console.log("Hii");
 // });
 
-// // 2) if a function returns another function is known as HOF
+// 2) if a function returns another function is known as HOF
 // function Parent() {
 //   return function Child() {
 //     console.log("Hello");
@@ -463,10 +463,10 @@ console.log(arr) // mutable can be change
 // const obj2 = new Object({ id: 2, fname: "Jane" });
 // console.log(obj2);
 
-// //! 3) Constructor Function
+// // //! 3) Constructor Function
 // function Student(id, firstName) {
 //   this.id = id;
-//   this.firstName = firstName;
+//   this.firstName = firstName;  
 // }
 // let s1 = new Student(1, "James");
 // console.log(s1);
@@ -486,19 +486,19 @@ console.log(arr) // mutable can be change
 // console.log(obj);
 
 // //! 2) READ
- // there are 2 ways to read
- // 1) using dot operator
+ // // there are 2 ways to read
+ // // 1) using dot operator
 
 // console.log(obj.fname); // John
 // console.log(obj.degree); // ud
 
- // 2) using square brackets
+ // // 2) using square brackets
 
 // let x = "lname";
 // console.log(obj["age"]); // 25
 // console.log(obj[x]); // Doe
 
- // for in loop
+ // // for in loop
 // for (let i in obj) {
 //   console.log(i, obj[i]);
 // }
@@ -1001,15 +1001,15 @@ console.log(arr) // mutable can be change
 // console.log(str1.substring(0, 4)); // Java
 // console.log(str1.substring(-10, -6)); // No output
 
-// // ! str.substr(startIndex , length) : similar to slice, but its 2nd arguement is length
+// ! str.substr(startIndex , length) : similar to slice, but its 2nd arguement is length
 // console.log(str1.substr(4, 6)); // script
 // console.log(str1.substr(-10, 4)); // Java
 
-// // ! str.replace(searchValue , replaceValue)
+ // ! str.replace(searchValue , replaceValue)
 // let str2 = "I love Python , Python has easy learning curve.";
 // console.log(str2.replace("Python", "Javascript")); // I love Javascript , , Python has easy learning curve.
 
-// // ! str.replaceAll(searchValue , replaceValue)
+ // ! str.replaceAll(searchValue , replaceValue)
 // console.log(str2.replaceAll("Python", "Javascript")); // I love Javascript , Javascript has easy learning curve.
 
 // let username = "    John Doe     ";
@@ -1065,77 +1065,77 @@ console.log(arr) // mutable can be change
 //! TIMER FUNCTIONS
 
 //! setInterval( callback , intervalTime )
-let intervalID = setInterval(() => {
-  console.log("Hiii");
-}, 2000);
+// let intervalID = setInterval(() => {
+//   console.log("Hiii");
+// }, 2000);
 
-console.log("IntervalID is", intervalID);
+// console.log("IntervalID is", intervalID);
 
-//! setTimeout( callback , timeOut )
-setTimeout(() => {
-  console.log("Byee");
-}, 12000);
+// //! setTimeout( callback , timeOut )
+// setTimeout(() => {
+//   console.log("Byee");
+// }, 12000);
 
-setTimeout(() => {
-  clearInterval(intervalID);
-  console.log("Interval Stopped");
-}, 8000);
+// setTimeout(() => {
+//   clearInterval(intervalID);
+//   console.log("Interval Stopped");
+// }, 8000);
 
-//! PROMISE
+// //! PROMISE
 
-const p1 = new Promise((resolve, reject) => {
-    if(10>2){
-        resolve("hello world")
-    }
-    else{
-        reject("bye bye")
-    }
-})
-console.log(p1)
+// const p1 = new Promise((resolve, reject) => {
+//     if(10>2){
+//         resolve("hello world")
+//     }
+//     else{
+//         reject("bye bye")
+//     }
+// })
+// console.log(p1)
 
-p1.then((data) => {
-    document.writeln(`<h3>$data</h3>`)
-})
+// p1.then((data) => {
+//     document.writeln(`<h3>$data</h3>`)
+// })
 
-p1.catch((err) => {
-    document.writeln(`<h3>$data</h3>`)
-})
+// p1.catch((err) => {
+//     document.writeln(`<h3>$data</h3>`)
+// })
 
-p1.finally((err) => {
-    document.writeln(`<h3>$data</h3>`)
-})
+// p1.finally((err) => {
+//     document.writeln(`<h3>$data</h3>`)
+// })
 
-//! PROMISE WITH ASYNC AND AWAIT
+// //! PROMISE WITH ASYNC AND AWAIT
 
-const API_URL ="https://dummyjson.com/todos"
+// const API_URL ="https://dummyjson.com/todos"
 
-async function getTodos(url) {
-    try {
-        let response = await fetch(url)
-        let data = await response.json()
-        console.log(data) //{todos: Array(30), total: 254, skip: 0, limit: 30}
+// async function getTodos(url) {
+//     try {
+//         let response = await fetch(url)
+//         let data = await response.json()
+//         console.log(data) //{todos: Array(30), total: 254, skip: 0, limit: 30}
     
-        displayTodos(data.todos) // array(30)
-    }
+//         displayTodos(data.todos) // array(30)
+//     }
 
-    catch (err) {
-        console.log(err);
+//     catch (err) {
+//         console.log(err);
         
-    }
-}
-getTodos(API_URL)
+//     }
+// }
+// getTodos(API_URL)
 
-function displayTodos(allTodos) {
-  console.log(allTodos);
+// function displayTodos(allTodos) {
+//   console.log(allTodos);
 
-  allTodos.forEach((ele) => {
-    let { id, userId, todo, completed } = ele;
+//   allTodos.forEach((ele) => {
+//     let { id, userId, todo, completed } = ele;
 
-    document.writeln(`
-      <div class = 'todo'>
-        <h4>${todo}</h4>
-        <span>${completed ? "Completed" : "Pending"}</span>
-      </div>
-      `);
-  });
-}
+//     document.writeln(`
+//       <div class = 'todo'>
+//         <h4>${todo}</h4>
+//         <span>${completed ? "Completed" : "Pending"}</span>
+//       </div>
+//       `);
+//   });
+// }
